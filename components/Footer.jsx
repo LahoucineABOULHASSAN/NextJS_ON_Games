@@ -86,8 +86,17 @@ const Footer = () => {
           {instagram}
         </a>
       </div>
-      <h1 className="text-lg font-semibold mb-1">
-        Copyright &copy; By TvMazeShow
+      <h1 className="text-lg font-semibold text-center mb-1">
+        Copyright &copy; By ONGames <br />
+        data from{" "}
+        <a
+          href="https://www.freetogame.com/api-doc"
+          className="font-semibold hover:underline hover:text-gray-700 transition ease-in-out duration-500"
+          target="_blank"
+          rel="noreferror"
+        >
+          the freetogame api
+        </a>
       </h1>
       <h2 className="text-lg">
         Built by{" "}

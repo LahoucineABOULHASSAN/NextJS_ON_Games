@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card, SearchForm } from "../../components";
-const Series = ({ shows }) => {
+const Games = ({ games }) => {
   const [search, setSearch] = useState("");
   const handleFilter = (elem) => {
     const searchItem = elem.toLowerCase();
@@ -9,15 +9,15 @@ const Series = ({ shows }) => {
 
   const alert = (
     <p className="rounded-2xl w-10/12 text-2xl text-center capitalize bg-red-200 p-4 my-8 mx-auto">
-      this show is not on our list
+      this game is not on our list
     </p>
   );
 
-  const data = shows
+  const data = games
     .filter((elem) => {
-      return elem.name.toLowerCase().includes(search);
+      return elem.title.toLowerCase().includes(search);
     })
-    .map((show) => <Card show={show} key={show.id} />);
+    .map((game) => <Card game={game} key={game.id} />);
 
   return (
     <section>
@@ -30,4 +30,4 @@ const Series = ({ shows }) => {
   );
 };
 
-export default Series;
+export default Games;

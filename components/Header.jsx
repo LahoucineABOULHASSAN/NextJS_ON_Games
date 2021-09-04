@@ -24,17 +24,17 @@ const Header = () => {
     >
       <div className="header flex flex-col items-center justify-center tracking-widest w-full h-full">
         <h1 className="text-shadow-md text-4xl text-gray-400 mb-2">
-          Welcome to TvMazeShow
+          Welcome to ONGames website
         </h1>
         <h2 className="text-shadow-md text-2xl text-gray-400 mb-1">
-          Pictures are from the{" "}
+          Data is from the{" "}
           <a
             className="font-semibold hover:underline hover:text-gray-300"
-            href="https://pixabay.com/api/docs/"
+            href="https://www.freetogame.com/api-doc"
             target="_blank"
             rel="noreferror"
           >
-            TvMaze API
+            freetogame API
           </a>
         </h2>
         <button
