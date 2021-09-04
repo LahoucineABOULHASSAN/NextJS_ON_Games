@@ -20,13 +20,13 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="flex flex-col items-center justify-center bg-gradient-to-r from-red-500 to-pink-500"
+      className="flex flex-col items-center justify-center bg-secondary p-10"
     >
-      <div className="header flex flex-col items-center justify-center tracking-widest w-full h-full">
-        <h1 className="text-shadow-md text-4xl text-gray-400 mb-2">
+      <div className="text-gray-700 flex flex-col items-center justify-center tracking-widest w-full h-full">
+        <h1 className="text-shadow-md text-4xl mb-2">
           Welcome to ONGames website
         </h1>
-        <h2 className="text-shadow-md text-2xl text-gray-400 mb-1">
+        <h2 className="text-shadow-md text-2xl mb-1">
           Data is from the{" "}
           <a
             className="font-semibold hover:underline hover:text-gray-300"
@@ -38,7 +38,7 @@ const Header = () => {
           </a>
         </h2>
         <button
-          className="flex flex-row justify-center text-md font-bold tracking-widest stroke-current stroke-1 bg-green-500 hover:bg-green-700 transition ease-in-out duration-700 rounded-2xl py-3 pr-4 pl-5 mt-4"
+          className="flex flex-row justify-center text-md font-bold tracking-widest stroke-current stroke-1 text-gray-300 bg-gray-700 hover:bg-primaryDark transition ease-in-out duration-700 rounded-2xl py-3 pr-4 pl-5 mt-4"
           onClick={scroll}
         >
           Scroll Down {arrow}
