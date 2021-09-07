@@ -37,7 +37,7 @@ const Serie = ({ game }) => {
       <Head>
         <title>ONGAMES | {game.title}</title>
       </Head>
-      <section className="bg-gray-200">
+      <section id="main" className="bg-gray-200">
         <GameHeader game={game} />
         <About game={game} />
         <Details game={game} />
