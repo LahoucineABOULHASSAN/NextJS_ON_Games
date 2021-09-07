@@ -5,8 +5,8 @@ const Details = ({ game }) => {
   const { os, processor, memory, graphics, storage } =
     game.minimum_system_requirements;
   return (
-    <div className="flex flex-col justify-between bg-gray-900 text-gray-300 w-full py-8 px-10">
-      <div className="flex flex-row flex-wrap items-center justify-between rounded-lg bg-gray-800 p-8 my-10">
+    <div className="flex flex-col justify-between bg-gray-900 text-gray-300 w-full py-12 px-10">
+      <div className="flex flex-row flex-wrap items-center justify-between rounded-lg bg-gray-800 p-8 mb-10">
         <div>
           <h1 className="text-md text-purple-300 tracking-widest font-semibold capitalize w-auto mb-3">
             Game Infos

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Games from "./Games";
+import Games from "./games/Games";
 
 const URL = `https://www.freetogame.com/api/games`;
 
