@@ -51,7 +51,7 @@ const github = (
 );
 const Footer = () => {
   return (
-    <footer className="text-gray-200 flex flex-col items-center justify-center bg-primary py-12">
+    <footer className="text-gray-800 flex flex-col items-center justify-center bg-purple-400 py-12">
       <div className="flex flex-row items-center justify-center mb-5">
         <a
           className="mx-1"
@@ -91,7 +91,7 @@ const Footer = () => {
         data from{" "}
         <a
           href="https://www.freetogame.com/api-doc"
-          className="font-semibold hover:underline hover:text-gray-700 transition ease-in-out duration-500"
+          className="font-semibold hover:underline hover:text-gray-500 transition ease-in-out duration-500"
           target="_blank"
           rel="noreferror"
         >
@@ -102,7 +102,7 @@ const Footer = () => {
         Built by{" "}
         <a
           href="https://aboulhassan.netlify.app"
-          className="font-semibold hover:underline hover:text-gray-700 transition ease-in-out duration-500"
+          className="font-semibold hover:underline hover:text-gray-500 transition ease-in-out duration-500"
           target="_blank"
           rel="noreferror"
         >

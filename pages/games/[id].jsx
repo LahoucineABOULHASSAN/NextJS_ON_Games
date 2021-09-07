@@ -1,4 +1,7 @@
+import Head from "next/head";
+
 import About from "./About";
+import GameHeader from "./GameHeader";
 
 const URL = "https://www.freetogame.com/api/games";
 
@@ -28,12 +31,16 @@ export const getStaticProps = async (context) => {
 };
 
 const Serie = ({ game }) => {
-  const { title } = game;
   return (
-    <section>
-      <h1>{title}</h1>
-      <About game={game} />
-    </section>
+    <>
+      <Head>
+        <title>ONGAMES | {game.title}</title>
+      </Head>
+      <section className="bg-gray-300">
+        <GameHeader game={game} />
+        <About game={game} />
+      </section>
+    </>
   );
 };
 

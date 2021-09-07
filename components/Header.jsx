@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="flex flex-col items-center justify-center bg-secondary p-10"
+      className="flex flex-col items-center justify-center bg-purple-400 p-10"
     >
       <div className="text-gray-700 flex flex-col items-center justify-center tracking-widest w-full h-full">
         <h1 className="text-shadow-md text-4xl mb-2">
@@ -38,7 +38,7 @@ const Header = () => {
           </a>
         </h2>
         <button
-          className="flex flex-row justify-center text-md font-bold tracking-widest stroke-current stroke-1 text-gray-300 bg-gray-700 hover:bg-primaryDark transition ease-in-out duration-700 rounded-2xl py-3 pr-4 pl-5 mt-4"
+          className="flex flex-row justify-center text-md font-bold tracking-widest stroke-current stroke-1 text-gray-300 bg-gray-700 hover:bg-cerise-900 transition ease-in-out duration-700 rounded-2xl py-3 pr-4 pl-5 mt-4"
           onClick={scroll}
         >
           Scroll Down {arrow}
