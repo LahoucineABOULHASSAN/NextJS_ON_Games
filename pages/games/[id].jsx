@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import About from "./About";
+import Details from "./Details";
 import GameHeader from "./GameHeader";
 
 const URL = "https://www.freetogame.com/api/games";
@@ -36,9 +37,10 @@ const Serie = ({ game }) => {
       <Head>
         <title>ONGAMES | {game.title}</title>
       </Head>
-      <section className="bg-gray-300">
+      <section className="bg-gray-200">
         <GameHeader game={game} />
         <About game={game} />
+        <Details game={game} />
       </section>
     </>
   );

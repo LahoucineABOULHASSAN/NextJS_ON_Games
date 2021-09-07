@@ -1,12 +1,17 @@
 const About = ({ game }) => {
-  const { title, status, description } = game;
+  const { short_description, description } = game;
   return (
-    <div className="p-10">
-      <h1 className="text-2xl text-green-500 font-semibold mb-4">About</h1>
-      <div className="rounded-lg text-sm text-gray-400 bg-gray-700 p-4">
-        <h3 className="text-lg text-gray-300 font-bold uppercase">{title}</h3>
-        <h4 className="mb-4">{status}</h4>
-        <p className="text-justify leading-6">{description}</p>
+    <div className="py-8 px-10">
+      <div className="flex flex-row flex-wrap justify-between text-gray-700">
+        <div className="md:w-1/4 text-xl leading-10 py-4">
+          <h1 className="text-sm font-semibold uppercase mb-2">
+            Game Overview
+          </h1>
+          <p className="text-lg text-justify">{short_description}</p>
+        </div>
+        <p className="md:w-3/4 text-sm whitespace-pre-line text-justify py-4 md:px-8">
+          {description}
+        </p>
       </div>
     </div>
   );
