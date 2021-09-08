@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Games from "./games/Games";
 
-const URL = `https://www.freetogame.com/api/games`;
+const URL = `https://www.freetogame.com/api/games?sort-by=release-date`;
 
 export const getStaticProps = async () => {
   const res = await fetch(URL);
