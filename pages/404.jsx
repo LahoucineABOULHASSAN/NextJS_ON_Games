@@ -1,3 +1,4 @@
+import Head from "next/head";
 const alert = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -13,27 +14,32 @@ const alert = (
 
 const NotFound = () => {
   return (
-    <section className="w-full flex flex-col items-center justify-center p-12">
-      <div className="rounded-xl bg-cerise-200 w-3/4 mx-auto py-12 px-8 my-4">
-        <h2 className="flex flex-row items-center justify-center w-2/4 mx-auto">
-          {alert}
-          <span className="border-l-2 border-gray-700 text-2xl font-bold text-cerise-800 py-2 px-4 mx-4">
-            404 Error
-          </span>
-        </h2>
-        <p className="text-3xl text-center capitalize mt-6">
-          This page could not be found.
-        </p>
-      </div>
-      <div className="mt-6">
-        <a
-          href="/"
-          className="rounded-lg shadow-lg bg-purple-400 hover:bg-purple-300 transition duration-500 ease-in-out text-sm font-semibold tracking-widest capitalize px-5 py-3"
-        >
-          Go to main page
-        </a>
-      </div>
-    </section>
+    <>
+      <Head>
+        <title>OnGames | Not Found</title>
+      </Head>
+      <section className="w-full flex flex-col items-center justify-center p-12">
+        <div className="rounded-xl bg-cerise-200 w-3/4 mx-auto py-12 px-8 my-4">
+          <h2 className="flex flex-row items-center justify-center w-2/4 mx-auto">
+            {alert}
+            <span className="border-l-2 border-gray-700 text-2xl font-bold text-cerise-800 py-2 px-4 mx-4">
+              404 Error
+            </span>
+          </h2>
+          <p className="text-3xl text-center capitalize mt-6">
+            This page could not be found.
+          </p>
+        </div>
+        <div className="mt-6">
+          <a
+            href="/"
+            className="rounded-lg shadow-lg bg-purple-400 hover:bg-purple-300 transition duration-500 ease-in-out text-sm font-semibold tracking-widest capitalize px-5 py-3"
+          >
+            Go to main page
+          </a>
+        </div>
+      </section>
+    </>
   );
 };
 export default NotFound;
