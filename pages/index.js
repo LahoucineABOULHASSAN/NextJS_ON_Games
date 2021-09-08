@@ -19,9 +19,7 @@ export default function Home({ games }) {
         <title>ONGAMES</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Games games={games} />
-      </main>
+      <Games games={games} />
     </div>
   );
 }

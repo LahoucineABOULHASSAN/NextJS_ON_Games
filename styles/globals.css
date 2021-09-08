@@ -14,7 +14,7 @@ html {
 }
 
 .game {
-  background: var(--transparent1);
+  background: linear-gradient(to left top, #00000033 50%, #000000b3 80%);
 }
 .modal {
   background: var(--transparent);

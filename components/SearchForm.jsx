@@ -5,7 +5,7 @@ const SearchForm = ({ handleFilter }) => {
       onSubmit={(event) => event.preventDefault()}
     >
       <input
-        className="border border-1 rounded-2xl border-gray-700 focus:outline-none focus:border-green-600 focus:bg-green-50 py-2 px-4 w-full"
+        className="shadow-md rounded-2xl border-gray-700 bg-gray-200 focus:outline-none focus:bg-purple-50 py-2 px-4 w-full"
         type="search"
         placeholder="Search"
         onChange={(event) => handleFilter(event.target.value)}

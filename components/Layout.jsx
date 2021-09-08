@@ -3,11 +3,11 @@ import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
-    <main>
+    <div className="w-full max-w-screen-xl">
       <Header />
       {children}
       <Footer />
-    </main>
+    </div>
   );
 };
 
