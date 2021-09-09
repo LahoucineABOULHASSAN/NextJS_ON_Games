@@ -1,9 +1,6 @@
 import { Modal } from "../../components";
 
 const Details = ({ game }) => {
-  const { platform, release_date, genre, status, developer } = game;
-  const { os, processor, memory, graphics, storage } =
-    game.minimum_system_requirements;
   return (
     <div className="flex flex-col justify-between bg-gray-900 text-gray-300 w-full py-12 px-10">
       {game && (
@@ -16,27 +13,27 @@ const Details = ({ game }) => {
               <span className="text-gray-300 font-semibold mr-4">
                 Platform:
               </span>{" "}
-              <span className="text-sm text-gray-400">{platform}</span>
+              <span className="text-sm text-gray-400">{game.platform}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">
                 Released:
               </span>{" "}
-              <span className="text-sm text-gray-400">{release_date}</span>
+              <span className="text-sm text-gray-400">{game.release_date}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">Genre:</span>{" "}
-              <span className="text-sm text-gray-400">{genre}</span>
+              <span className="text-sm text-gray-400">{game.genre}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">Status:</span>{" "}
-              <span className="text-sm text-gray-400">{status}</span>
+              <span className="text-sm text-gray-400">{game.status}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">
                 Developer:
               </span>{" "}
-              <span className="text-sm text-gray-400">{developer}</span>
+              <span className="text-sm text-gray-400">{game.developer}</span>
             </h3>
           </div>
           <div>
@@ -45,29 +42,29 @@ const Details = ({ game }) => {
             </h1>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">Memory:</span>{" "}
-              <span className="text-sm text-gray-400">{memory}</span>
+              <span className="text-sm text-gray-400">{game.memory}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">Storage:</span>{" "}
-              <span className="text-sm text-gray-400">{storage}</span>
+              <span className="text-sm text-gray-400">{game.storage}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">
                 Processor:
               </span>{" "}
-              <span className="text-sm text-gray-400">{processor}</span>
+              <span className="text-sm text-gray-400">{game.processor}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">
                 Operation System:
               </span>{" "}
-              <span className="text-sm text-gray-400">{os}</span>
+              <span className="text-sm text-gray-400">{game.os}</span>
             </h3>
             <h3>
               <span className="text-gray-300 font-semibold mr-4">
                 Graphics:
               </span>{" "}
-              <span className="text-sm text-gray-400">{graphics}</span>
+              <span className="text-sm text-gray-400">{game.graphics}</span>
             </h3>
           </div>
         </div>
