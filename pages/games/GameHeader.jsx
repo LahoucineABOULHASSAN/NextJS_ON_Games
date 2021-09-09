@@ -1,6 +1,6 @@
 const Gameheader = ({ game }) => {
   const pic =
-    (game.screenshots.length && game.screenshots[0].image) ||
+    (game && game.screenshots.length && game.screenshots[0].image) ||
     "https://via.placeholder.com/900?text=Image+Not+Found";
   return (
     <div className="relative w-full">
