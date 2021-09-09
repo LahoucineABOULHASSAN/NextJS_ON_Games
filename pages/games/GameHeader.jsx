@@ -1,11 +1,10 @@
 const Gameheader = ({ game }) => {
-  const { screenshots, title, publisher, game_url } = game;
-  const pic = screenshots[0].image;
+  const pic = game.screenshots[0].image;
   return (
     <div className="relative w-full">
       <img
         src={
-          (image && pic) ||
+          (game.screenshots && pic) ||
           "https://via.placeholder.com/900?text=Image+Not+Found"
         }
         className="h-auto"
@@ -15,12 +14,12 @@ const Gameheader = ({ game }) => {
         <h1 className="mb-3">
           <a
             className="text-4xl leading-8 mb-3 hover:text-gray-400"
-            href={game_url}
+            href={game.game_url}
           >
-            {title}
+            {game.title}
           </a>
         </h1>
-        <h3 className="text-lg font-semibold mb-2">{publisher}</h3>
+        <h3 className="text-lg font-semibold mb-2">{game.publisher}</h3>
       </div>
     </div>
   );
