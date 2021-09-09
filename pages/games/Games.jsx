@@ -24,20 +24,36 @@ const Games = ({ games }) => {
     </div>
   );
 
-  const data = games
-    .filter((elem) => {
-      return elem.title.toLowerCase().includes(search);
-    })
-    .map((game) => <Card game={game} key={game.id} />);
+  const loading = (
+    <div className="my-12">
+      <h2 className="text-4xl w-2/4 mx-auto text-center animate-ping">
+        Loading ...
+      </h2>
+    </div>
+  );
+
+  const data =
+    games &&
+    games
+      .filter((elem) => {
+        return elem.title.toLowerCase().includes(search);
+      })
+      .map((game) => <Card game={game} key={game.id} />);
 
   return (
-    <section id="main" className="w-full">
-      <SearchForm handleFilter={handleFilter} />
-      {!data.length && alert}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 w-10/12 my-12 mx-auto">
-        {data.length ? data : null}
-      </div>
-    </section>
+    <>
+      {data ? (
+        <section id="main" className="w-full">
+          <SearchForm handleFilter={handleFilter} />
+          {!data && alert}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 w-10/12 my-12 mx-auto">
+            {data ? data : null}
+          </div>
+        </section>
+      ) : (
+        loading
+      )}
+    </>
   );
 };
 

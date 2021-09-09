@@ -6,10 +6,21 @@ const Card = ({ game }) => {
 
   return (
     <div className="shadow-md rounded-lg  transition duration-700 ease pb-1">
-      <CardImage title={title} image={thumbnail} url={`/games/${id}`} />
-      <div className="relative bg-white z-20 p-4">
-        <CardHeader title={title} published={release_date} genre={genre} />
-      </div>
+      {game && (
+        <>
+          <CardImage
+            title={title}
+            image={
+              (image && thumbnail) ||
+              "https://via.placeholder.com/900?text=Image+Not+Found"
+            }
+            url={`/games/${id}`}
+          />
+          <div className="relative bg-white z-20 p-4">
+            <CardHeader title={title} published={release_date} genre={genre} />
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -1,19 +1,15 @@
 const Gameheader = ({ game }) => {
-  const {
-    screenshots,
-    title,
-    platform,
-    genre,
-    publisher,
-    game_url,
-    status,
-    developer,
-    release_date,
-  } = game;
+  const { screenshots, title, publisher, game_url } = game;
   const pic = screenshots[0].image;
   return (
     <div className="relative w-full">
-      <img src={pic} className="h-auto" />
+      <img
+        src={
+          (image && pic) ||
+          "https://via.placeholder.com/900?text=Image+Not+Found"
+        }
+        className="h-auto"
+      />
       <div className="game absolute top-0 left-0 bottom-0 w-full"></div>
       <div className="absolute top-0 left-0 bottom-0 text-gray-300 p-10 w-full">
         <h1 className="mb-3">

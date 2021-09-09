@@ -37,11 +37,13 @@ const Serie = ({ game }) => {
       <Head>
         <title>OnGames | {game.title}</title>
       </Head>
-      <section id="main" className="bg-gray-200">
-        <GameHeader game={game} />
-        <About game={game} />
-        <Details game={game} />
-      </section>
+      {game && (
+        <section id="main" className="bg-gray-200">
+          <GameHeader game={game} />
+          <About game={game} />
+          <Details game={game} />
+        </section>
+      )}
     </>
   );
 };

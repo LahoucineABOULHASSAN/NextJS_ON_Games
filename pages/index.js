@@ -19,7 +19,7 @@ export default function Home({ games }) {
         <title>OnGames</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Games games={games} />
+      {games && <Games games={games} />}
     </div>
   );
 }
