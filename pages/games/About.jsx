@@ -1,5 +1,4 @@
 const About = ({ game }) => {
-  const { short_description, description } = game;
   return (
     <div className="py-12 px-10">
       {game && (
@@ -8,10 +7,10 @@ const About = ({ game }) => {
             <h1 className="text-sm font-semibold uppercase mb-2">
               Game Overview
             </h1>
-            <p className="text-lg text-justify">{short_description}</p>
+            <p className="text-lg text-justify">{game.short_description}</p>
           </div>
           <p className="md:w-3/4 text-sm whitespace-pre-line text-justify pb-4 md:px-8">
-            {description}
+            {game.description}
           </p>
         </div>
       )}
