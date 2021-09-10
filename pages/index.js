@@ -8,13 +8,13 @@ export const getStaticProps = async () => {
   const data = await res.json();
 
   return {
-    props: { games: data.slice(0, 8) },
+    props: { games: data },
   };
 };
 
 export default function Home({ games }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center">
       <Head>
         <title>OnGames</title>
         <link rel="icon" href="/favicon.ico" />

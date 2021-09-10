@@ -39,23 +39,23 @@ const Modal = ({ game }) => {
       {/* <!-- The Modal/Lightbox --> */}
       <div
         id="myModal"
-        className="modal hidden fixed z-1 left-0 top-0 w-full h-full overflow-auto"
+        className="modal hidden fixed z-1 left-0 top-0 bottom-0 right-0 w-full h-full overflow-auto"
       >
-        <div className="flex flex-col items-center justify-center h-full">
-          <div
-            className="close text-4xl font-bold text-right text-gray-300 hover:text-cerise-500 w-11/12 mx-auto cursor-pointer"
-            onClick={closeModal}
-          >
-            &times;
-          </div>
+        <div className="flex flex-col items-center justify-around">
           <div className="w-11/12 md:max-w-screen-xl relative">
             {screenshots.map((screenshot, index) => (
               <div className="mySlides hidden" key={index}>
-                <p className="text-lg font-semibold text-gray-400 text-center my-4">
-                  <span className="float-left">
+                <p className="flex flex-row items-center justify-between text-lg font-semibold text-gray-400 mt-8 my-1">
+                  <span>
                     {index + 1} / {total}
                   </span>
                   {`${title} - Screenshot${index + 1}`}
+                  <span
+                    className="close text-4xl text-gray-300 hover:text-cerise-500 cursor-pointer"
+                    onClick={closeModal}
+                  >
+                    &times;
+                  </span>
                 </p>
                 <img
                   src={screenshot.image}
@@ -80,7 +80,7 @@ const Modal = ({ game }) => {
             </a>
 
             {/* Thumbnail image controls */}
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-2 mt-4">
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-2 my-6">
               {screenshots.map((screenshot, index) => (
                 <div className="float-left" key={index}>
                   <img
