@@ -1,6 +1,6 @@
 const About = ({ game }) => {
   return (
-    <div className="py-12 px-10">
+    <div className="py-12 px-6 md:px-10">
       {game && (
         <div className="flex flex-row flex-wrap justify-between text-gray-700">
           <div className="md:w-1/4 text-xl leading-10 pb-4">

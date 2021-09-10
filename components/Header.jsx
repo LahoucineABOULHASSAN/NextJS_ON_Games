@@ -23,10 +23,10 @@ const Header = () => {
       className="flex flex-col items-center justify-center bg-purple-400 p-10"
     >
       <div className="text-gray-700 flex flex-col items-center justify-center tracking-widest w-full h-full">
-        <h1 className="text-shadow-md text-4xl mb-4">
+        <h1 className="text-shadow-md text-3xl text-center md:text-4xl mb-6">
           Welcome to ONGames website
         </h1>
-        <h2 className="text-shadow-md text-2xl mb-1">
+        <h2 className="text-shadow-md text-xl text-center uppercase md:text-2xl mb-1">
           The latest games from the{" "}
           <a
             className="font-semibold hover:underline hover:text-gray-300"

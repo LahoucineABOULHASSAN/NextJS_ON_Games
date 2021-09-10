@@ -15,7 +15,7 @@ const Modal = ({ game }) => {
   const total = screenshots.length;
   return (
     <div>
-      <h1 className="text-md text-purple-300 tracking-widest font-semibold capitalize w-auto ml-8 mb-4">
+      <h1 className="text-md text-center md:text-left text-purple-300 tracking-widest font-semibold capitalize w-auto md:ml-8 mb-4">
         Screenshots
       </h1>
 
@@ -48,7 +48,7 @@ const Modal = ({ game }) => {
           >
             &times;
           </div>
-          <div className="w-11/12 max-w-screen-xl relative">
+          <div className="w-11/12 md:max-w-screen-xl relative">
             {screenshots.map((screenshot, index) => (
               <div className="mySlides hidden" key={index}>
                 <p className="text-lg font-semibold text-gray-400 text-center my-4">
@@ -67,20 +67,20 @@ const Modal = ({ game }) => {
 
             {/* <!-- Next/previous controls --> */}
             <a
-              className="transition duration-500 ease-in-out cursor-pointer absolute bottom-2/4 w-auto text-gray-300 text-2xl font-bold left-0 rounded-r-xl bg-cerise-900 p-4 hover:bg-black"
+              className="transition duration-500 ease-in-out cursor-pointer absolute top-2/4 md:top-auto md:bottom-2/4 w-auto text-gray-300 text-md md:text-2xl font-bold rounded-r-xl bg-cerise-900 px-2 py-1 md:p-4 hover:bg-black"
               onClick={() => plusSlides(-1)}
             >
               &#10094;
             </a>
             <a
-              className="transition duration-500 ease-in-out cursor-pointer absolute right-0 bottom-2/4 w-auto text-gray-300 text-2xl font-bold rounded-l-xl bg-cerise-900 p-4 hover:bg-black"
+              className="transition duration-500 ease-in-out cursor-pointer absolute right-0 top-2/4 md:top-auto md:bottom-2/4 w-auto text-gray-300 text-md md:text-2xl font-bold rounded-l-xl bg-cerise-900 px-2 py-1 md:p-4 hover:bg-black"
               onClick={() => plusSlides(1)}
             >
               &#10095;
             </a>
 
             {/* Thumbnail image controls */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mt-4">
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-2 mt-4">
               {screenshots.map((screenshot, index) => (
                 <div className="float-left" key={index}>
                   <img

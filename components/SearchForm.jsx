@@ -1,7 +1,7 @@
 const SearchForm = ({ handleFilter }) => {
   return (
     <form
-      className=" w-2/4 mt-12 mx-auto"
+      className="w-full md:w-2/4 mb-12 mx-auto"
       onSubmit={(event) => event.preventDefault()}
     >
       <input
